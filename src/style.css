@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+.scatter-plot {
+    position: relative;
+}
+
+.scatter-plot.canvas {
+    position: absolute;
+    pointer-events: all;
+    z-index: 1;
+}
+
+.scatter-plot.svg {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.scatter-plot.rect {
+    fill: #222;
+    z-index: 100;
+}
+
+.scatter-plot.brush-container {
+    z-index : 1;
+    pointer-events: none;
+}
+
+.brush {
+    pointer-events: none;
+}
+
+.brush .extent {
+    fill-opacity: .085;
+    shape-rendering: crispEdges;
+}
+
+.scatter-plot .plot {
+    fill: #ffffff;
+}
+
+.scatter-plot .grid .tick {
+    stroke: #BEC9CE;
+    opacity: 0.6;
+}
+
+.scatter-plot .grid .path {
+    stroke-width: 0;
+}
+
+.scatter-plot .axis path, .axis line {
+    fill: none;
+    stroke: none;
+    shape-rendering: crispEdges;
+}
+
+.scatter-plot .axis path {
+    display: none;
+}
+
+.scatter-plot .line {
+    fill: none;
+    stroke: #9175f0;
+    stroke-width: 2px;
+}
+
+.scatter-plot text {
+    fill: #A7A9AC;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.scatter-plot .label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}

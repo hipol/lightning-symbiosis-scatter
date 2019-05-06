@@ -1,0 +1,30 @@
+{
+  "name": "lightning-symbiosis-scatter",
+  "version": "0.1.10",
+  "dependencies": {
+    "brfs": "^1.4.0",
+    "d3": "^3.5.5",
+    "d3-multiaxis-zoom": "^1.0.4",
+    "lightning-client-utils": "^0.7.5",
+    "lightning-visualization": "^0.1.4",
+    "lodash": "^3.8.0"
+  },
+  "keywords": [
+    "lightning-visualization"
+  ],
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightning-viz/lightning-scatter.git"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  },
+  "lightning": {
+    "name": "symbiosis-scatter"
+  }
+}
