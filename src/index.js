@@ -339,7 +339,7 @@ var Visualization = LightningVisualization.extend({
                     .attr("x2", self.x(xval))  //<<== and here
                     .attr("y2", height - margin.top - margin.bottom)
                     .style("stroke-width", 2)
-                    .style("stroke", "#00d5f3")
+                    .style("stroke", self.data.verticallinecolor)
                     .style("fill", "none");
 
             }
