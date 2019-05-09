@@ -373,7 +373,7 @@ var Visualization = LightningVisualization.extend({
         }
 
         if(_.has(this.data, 'verticalline')) {
-            xval = this.data.verticalline;
+            let xval = this.data.verticalline;
             console.log("does this work")
             console.log(xval)
             console.log(x(xval))
