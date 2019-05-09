@@ -357,7 +357,7 @@ var Visualization = LightningVisualization.extend({
                 .text(txt);
         }
         if(_.has(this.data, 'yaxis')) {
-            txt = this.data.yaxis;
+            txt = this.data.verticalline;
             if(_.isArray(txt)) {
                 txt = txt[0];
             }
