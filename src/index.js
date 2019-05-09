@@ -357,7 +357,7 @@ var Visualization = LightningVisualization.extend({
                 .text(txt);
         }
         if(_.has(this.data, 'yaxis')) {
-            console.log("does this work")
+
             txt = this.data.verticalline;
             if(_.isArray(txt)) {
                 txt = txt[0];
@@ -374,7 +374,12 @@ var Visualization = LightningVisualization.extend({
 
         if(_.has(this.data, 'verticalline')) {
             xval = this.data.verticalline;
-
+            console.log("does this work")
+            console.log(xval)
+            console.log(x(xval))
+            console.log(height)
+            console.log(margin.top)
+            console.log(margin.bottom)
             svg.append("line")
                 .attr("x1", x(xval))  //<<== change your code here
                 .attr("y1", 0)
