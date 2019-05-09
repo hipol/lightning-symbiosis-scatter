@@ -320,6 +320,25 @@ var Visualization = LightningVisualization.extend({
             if(options.tooltips && highlighted.length) {
                 self.showTooltip(self.data.points[highlighted[0]]);
             }
+
+            if(_.has(this.data, 'verticalline')) {
+                let xval = this.data.verticalline;
+                console.log("does this work")
+                console.log(xval)
+                console.log(this.x(xval))
+                console.log(height)
+                console.log(margin.top)
+                console.log(margin.bottom)
+                svg.append("line")
+                    .attr("x1", this.x(xval))  //<<== change your code here
+                    .attr("y1", 0)
+                    .attr("x2", this.x(xval))  //<<== and here
+                    .attr("y2", height - margin.top - margin.bottom)
+                    .style("stroke-width", 2)
+                    .style("stroke", "#00d5f3")
+                    .style("fill", "none");
+
+            }
         }
 
         function updateAxis() {
@@ -372,24 +391,7 @@ var Visualization = LightningVisualization.extend({
                 .text(txt);
         }
 
-        if(_.has(this.data, 'verticalline')) {
-            let xval = this.data.verticalline;
-            console.log("does this work")
-            console.log(xval)
-            console.log(this.x(xval))
-            console.log(height)
-            console.log(margin.top)
-            console.log(margin.bottom)
-            svg.append("line")
-                .attr("x1", this.x(xval))  //<<== change your code here
-                .attr("y1", 0)
-                .attr("x2", this.x(xval))  //<<== and here
-                .attr("y2", height - margin.top - margin.bottom)
-                .style("stroke-width", 2)
-                .style("stroke", "red")
-                .style("fill", "none");
-
-        }
+        
 
         d3.select(selector).attr('tabindex', -1);
 
