@@ -375,9 +375,9 @@ var Visualization = LightningVisualization.extend({
             xval = this.data.verticalline;
 
             svg.append("line")
-                .attr("x1", self.x(xval))  //<<== change your code here
+                .attr("x1", x(xval))  //<<== change your code here
                 .attr("y1", 0)
-                .attr("x2", self.x(xval))  //<<== and here
+                .attr("x2", x(xval))  //<<== and here
                 .attr("y2", height - margin.top - margin.bottom)
                 .style("stroke-width", 2)
                 .style("stroke", "red")
