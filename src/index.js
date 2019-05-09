@@ -50,6 +50,7 @@ var Visualization = LightningVisualization.extend({
         var margin = this.margin;
         var self = this;
 
+    
         var points = data.points;
 
         var xDomain = d3.extent(points, function(d) {
@@ -368,6 +369,20 @@ var Visualization = LightningVisualization.extend({
                 .attr('x', - (height - margin.top - margin.bottom) / 2)
                 .attr('y', -margin.left + 20)
                 .text(txt);
+        }
+
+        if(_.has(this.data, 'verticalline')) {
+            xval = this.data.verticalline;
+
+            svg.append("line")
+                .attr("x1", self.x(xval))  //<<== change your code here
+                .attr("y1", 0)
+                .attr("x2", self.x(xval))  //<<== and here
+                .attr("y2", height - margin.top - margin.bottom)
+                .style("stroke-width", 2)
+                .style("stroke", "red")
+                .style("fill", "none");
+
         }
 
         d3.select(selector).attr('tabindex', -1);
