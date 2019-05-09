@@ -323,7 +323,7 @@ var Visualization = LightningVisualization.extend({
 
             if(_.has(self.data, 'verticalline')) {
 
-                 d3.select(`verticalline`).remove();
+                 d3.select(`.verticalline`).remove();
 
                 let xval = self.data.verticalline;
                 console.log("does this work")
